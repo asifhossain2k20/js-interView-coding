@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this Keyword</title>
+</head>
+<body>
+
+    <h1>About This Key Word</h1>
+    <h3 onclick="this.innerText='cliked'">This is onclick</h3>
+    <script>
+        const obj1={
+            name:'Alif',
+            getFullName:function(){
+                console.log(this);
+                return 'Mr '+this.name;
+            }
+        }
+        const obj2={
+            name:"XXX"
+        }
+        obj1.getFullName();
+        
+        obj2.getFullName=obj1.getFullName;
+        obj2.getFullName();
+    </script>
+</body>
+</html>
